@@ -1,0 +1,1066 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+  word-wrap: break-word;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*---Scroll Top Button---*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 0.9rem;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(blue, purple);
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 30%;
+}
+
+#myBtn i {
+  font-size: 3rem;
+  padding: 0.4rem;
+}
+
+#myBtn:hover {
+  color: black;
+}
+
+/*---Header Section---*/
+#header {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.9))), url(images/headerbg.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url(images/headerbg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2rem 0 10rem 0;
+  position: relative;
+  z-index: 0;
+}
+
+#header .navbar {
+  padding: 0 0 5rem 0;
+}
+
+#header .navbar .navbar-brand {
+  font-size: 4rem;
+  color: #7d5fff;
+  font-weight: bolder;
+}
+
+#header .navbar .navbar-nav .nav-item .nav-link {
+  font-size: 1.5rem;
+  margin: 0 1.2rem;
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
+  -webkit-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+}
+
+#header .navbar .navbar-nav .nav-item .nav-link.active {
+  color: #7d5fff;
+}
+
+#header .navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #7d5fff;
+}
+
+#header .navbar .navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+#header .navbar .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 0.2rem;
+  display: inline-block;
+  top: 100%;
+  left: 0%;
+  background: #7d5fff;
+  -webkit-transition: width 0.7s;
+  transition: width 0.7s;
+}
+
+#header .content-wrapper {
+  width: 100%;
+  padding: 4rem auto;
+}
+
+#header .header-text {
+  padding: 2rem 0;
+  line-height: 6rem;
+}
+
+#header .header-text h5 {
+  font-size: 3rem;
+  position: relative;
+  margin: 2rem 0;
+  font-weight: 700;
+}
+
+#header .header-text h5::after {
+  content: "";
+  width: 18vw;
+  height: 0.3rem;
+  background: #7d5fff;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-left: 0.4rem;
+}
+
+#header .header-text h2 {
+  font-size: 5.3rem;
+  margin-bottom: 2rem;
+  font-weight: 900;
+  color: #7d5fff;
+  -webkit-animation: name 1.5s infinite linear;
+          animation: name 1.5s infinite linear;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes name {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes name {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#header .header-text p {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+#header .header-text .pri-btn {
+  background: #7d5fff;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid #7d5fff;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-right: 2rem;
+  font-weight: bolder;
+}
+
+#header .header-text .pri-btn:hover {
+  background: transparent;
+  color: black;
+}
+
+#header .header-text .sec-btn {
+  border: 0.2rem solid #7d5fff;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  background: transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-weight: bolder;
+}
+
+#header .header-text .sec-btn:hover {
+  background: #7d5fff;
+  color: white;
+}
+
+/*---Social Section---*/
+.social {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(blue, purple);
+  border-radius: 10rem 0rem 0rem 10rem;
+  z-index: 100;
+}
+
+.social ul {
+  padding: 1rem;
+}
+
+.social ul li {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.social ul li a {
+  text-decoration: none;
+}
+
+.social ul li a img {
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+  width: 2rem;
+}
+
+.social ul li a img:hover {
+  -webkit-transform: rotate(360deg) scale(1.3);
+          transform: rotate(360deg) scale(1.3);
+}
+
+/*----About Section---*/
+#about {
+  padding: 15rem 0;
+}
+
+#about h2 span {
+  font-size: 3.3rem;
+  display: block;
+  font-weight: 700;
+  position: relative;
+}
+
+#about p {
+  font-size: 1.8rem;
+  color: grey;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin: 5rem 0;
+}
+
+#about p span i {
+  font-size: 2.2rem;
+  color: #7d5fff;
+}
+
+#about .imgpart {
+  overflow: hidden;
+  position: relative;
+  border-radius: 5rem;
+}
+
+#about .imgpart::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #7d5fff;
+  display: block;
+  z-index: -2;
+}
+
+#about .imgpart img {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  border-radius: 5rem;
+}
+
+#about .imgpart img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+#about .imgpart:hover.imgpart {
+  -webkit-box-shadow: -0.2rem -0.2rem 2rem #7d5fff;
+          box-shadow: -0.2rem -0.2rem 2rem #7d5fff;
+  padding: 1rem;
+}
+
+/*---Skills Section---*/
+#skills {
+  padding: 5rem 0;
+  background: #FBFBFF;
+}
+
+#skills h2 {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+#skills .skill .col-12 {
+  margin: 1.2rem 0;
+}
+
+#skills .skill .col-12 h3 {
+  color: black;
+  font-weight: bold;
+}
+
+#skills .skill .col-12 h3 span i {
+  color: #7d5fff;
+  font-size: 3rem;
+  margin-left: 1rem;
+}
+
+#skills .education {
+  text-align: right;
+}
+
+#skills .education .edu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#skills .education .edu-container .col-12 {
+  padding: 1.5rem;
+}
+
+#skills .education .edu-container .col-12 h3 {
+  font-weight: bold;
+}
+
+#skills .education .edu-container .col-12 h3 span i {
+  color: #7d5fff;
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+#skills .education .edu-container .col-12 h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/*---Services Section---*/
+#services {
+  padding: 5rem 0;
+  margin: 4rem auto;
+}
+
+#services .col-12 h6 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#services .col-12 h6::after {
+  content: "";
+  width: 8vw;
+  height: 0.3rem;
+  display: inline-block;
+  background: #7d5fff;
+  position: absolute;
+  top: 50%;
+  margin-left: 0.4rem;
+}
+
+#services .col-12 h2 {
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
+#services .row .service {
+  margin: 4rem auto;
+  padding: 1.8rem 2.2rem;
+  background: #f8faff;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+#services .row .service:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(blue, purple);
+  color: white;
+  -webkit-filter: drop-shadow(0.3rem 0.3rem 0.6rem black);
+          filter: drop-shadow(0.3rem 0.3rem 0.6rem black);
+}
+
+#services .row .service:hover a {
+  color: white;
+}
+
+#services .row .service:hover a::after {
+  background: white;
+}
+
+#services .row .service img {
+  margin: 3.5rem 0;
+}
+
+#services .row .service h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 1.9rem;
+  font-weight: bolder;
+}
+
+#services .row .service p {
+  font-size: 1.62rem;
+  margin: 1.3rem 0;
+  font-weight: 350;
+}
+
+#services .row .service a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: inline-block;
+  padding: 1rem 0;
+  margin: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+}
+
+#services .row .service a:hover::after {
+  width: 100%;
+}
+
+#services .row .service a::after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  height: 0.3rem;
+  background: #7d5fff;
+  position: absolute;
+  left: 0;
+  top: 90%;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+/*---Testimonials---*/
+#clients {
+  padding: 5rem 0;
+}
+
+#clients h5 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  position: relative;
+}
+
+#clients h5::after {
+  content: "";
+  width: 8vw;
+  height: 0.3rem;
+  display: inline-block;
+  background: #7d5fff;
+  position: absolute;
+  top: 50%;
+  margin-left: 0.4rem;
+}
+
+#clients h2 {
+  font-size: 4.4rem;
+  font-weight: bolder;
+}
+
+#clients .carousel-indicators {
+  position: relative;
+  top: 100%;
+  font-size: 1rem;
+}
+
+#clients .carousel-indicators li {
+  background: #686de0;
+  border-radius: 50%;
+  width: 1.4rem;
+  height: 0.1rem;
+}
+
+#clients .client-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(blue, purple);
+  padding: 5rem 2rem;
+  background-clip: padding-box;
+  -webkit-transition: 0.7s linear;
+  transition: 0.7s linear;
+}
+
+#clients .client-container:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(blue, purple);
+  -webkit-filter: drop-shadow(0.3rem 0.3rem 0.6rem black);
+          filter: drop-shadow(0.3rem 0.3rem 0.6rem black);
+}
+
+#clients .client-container h2 {
+  font-size: 3rem;
+  margin: 2rem 0;
+  color: black;
+  font-weight: bolder;
+}
+
+#clients .client-container p {
+  font-size: 1.8rem;
+  color: whitesmoke;
+}
+
+#clients .client-container span i {
+  font-size: 2rem;
+  margin: 1rem 0.4rem;
+  color: gold;
+}
+
+/*---Portfolio Section---*/
+#portfolio {
+  padding: 10rem 0;
+}
+
+#portfolio h5 {
+  font-size: 2rem;
+  position: relative;
+}
+
+#portfolio h5::after {
+  content: "";
+  width: 8vw;
+  height: 0.3rem;
+  display: inline-block;
+  background: #7d5fff;
+  position: absolute;
+  top: 50%;
+  margin-left: 0.4rem;
+}
+
+#portfolio h2 {
+  font-size: 4.4rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#portfolio ul {
+  padding-left: 0;
+  margin: 5rem auto;
+}
+
+#portfolio ul li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.8rem;
+  margin: 0.2rem 2rem 0.2rem 0;
+  background: #ecf0f1;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#portfolio ul li.active {
+  background: #7d5fff;
+  color: white;
+}
+
+#portfolio .work-container {
+  padding: 0.8rem;
+  margin: 0 2rem 4rem 0;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(blue), to(purple));
+  background: linear-gradient(blue, purple);
+  -webkit-filter: drop-shadow(0.3rem 0.3rem 0.6rem black);
+          filter: drop-shadow(0.3rem 0.3rem 0.6rem black);
+  overflow: hidden;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#portfolio .work-container:hover {
+  background: #7d5fff;
+  color: white;
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.6rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.6rem black);
+}
+
+#portfolio .work-container:hover h4 {
+  color: black;
+}
+
+#portfolio .work-container figure {
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 0.5rem;
+}
+
+#portfolio .work-container img {
+  -webkit-transition: -webkit-transform 0.7s ease-out;
+  transition: -webkit-transform 0.7s ease-out;
+  transition: transform 0.7s ease-out;
+  transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out;
+}
+
+#portfolio .work-container img:hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+#portfolio .work-container h3 {
+  font-size: 2rem;
+  margin: 2rem 0;
+  font-weight: 900;
+}
+
+#portfolio .work-container h3 span i {
+  font-size: 2rem;
+  margin: 0 0.8rem;
+}
+
+#portfolio .work-container h4 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 1.9rem auto;
+  margin-top: 2.6rem;
+  color: #7d5fff;
+}
+
+#portfolio .work-container p {
+  font-size: 1.4rem;
+  color: white;
+}
+
+#portfolio .work-container a {
+  display: inline-block;
+  margin: 2rem auto;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  background: #686de0;
+  padding: 1.2rem 2.6rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #686de0;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#portfolio .work-container a:hover {
+  color: black;
+  background: white;
+}
+
+/*---Contact Section----*/
+#contact {
+  padding: 10rem 0;
+  background: #f5f6fa;
+}
+
+#contact h2 {
+  font-weight: bolder;
+  font-size: 4.4rem;
+}
+
+#contact .form-container h6 {
+  font-size: 1.4rem;
+}
+
+#contact .form-container h6 span {
+  color: red;
+}
+
+#contact .form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .form-container form input {
+  padding: 0.3rem 1.2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #7d5fff;
+  font-weight: bold;
+}
+
+#contact .form-container form input:focus {
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+  outline: none;
+}
+
+#contact .form-container form select {
+  padding: 0.3rem 1.2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5rem;
+  border: 0.2rem solid #7d5fff;
+  font-weight: bold;
+}
+
+#contact .form-container form select:focus {
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+  outline: none;
+}
+
+#contact .form-container form textarea {
+  width: 100%;
+  min-height: 12vh;
+  max-height: 18vh;
+  padding: 0.3rem 1.2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  border: 0.2rem solid #7d5fff;
+}
+
+#contact .form-container form textarea:focus {
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+  outline: none;
+}
+
+#contact .form-container form button {
+  padding: 0.3rem 1.2rem;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 2rem;
+  outline: none;
+  border: 0.2rem transparent;
+  background: #7d5fff;
+  border-radius: 5rem;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+#contact .form-container form button:hover {
+  color: black;
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+          filter: drop-shadow(0.2rem 0.2rem 0.3rem black);
+}
+
+#contact .address-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .address-container .address {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#contact .address-container .address address {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#contact .address-container .address h3 {
+  font-weight: 700;
+}
+
+#contact .address-container .address span i {
+  font-size: 3rem;
+  color: white;
+  background: #7d5fff;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+/*-----Footer Section---*/
+#footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 5rem 0 5rem 0;
+}
+
+#footer .pages h2 {
+  font-weight: bolder;
+}
+
+#footer .pages a {
+  font-size: 2rem;
+  font-weight: 300;
+  display: block;
+  text-decoration: none;
+}
+
+#footer .newsletter {
+  height: 100%;
+  width: 50%;
+  margin: 2rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#footer .newsletter input {
+  outline: none;
+  border: none;
+  padding: 1rem 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+#footer .newsletter button {
+  width: 50%;
+  padding: 0.6rem;
+  background: #7d5fff;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+}
+
+#footer .newsletter button:hover {
+  -webkit-filter: drop-shadow(0.2rem 0.2rem 0.7rem #7d5fff);
+          filter: drop-shadow(0.2rem 0.2rem 0.7rem #7d5fff);
+  color: black;
+}
+
+#footer .newsletter small {
+  font-size: 1.8rem;
+}
+
+#footer hr {
+  height: 0.3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#footer small {
+  font-size: 2rem;
+}
+
+/*RESPONSIVE DESIGN*/
+@media screen and (max-width: 992px) {
+  #header {
+    padding: 1rem auto;
+  }
+  #header .content-wrapper {
+    padding-top: 1.5rem;
+  }
+  #header .header-text h5 {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  #header .header-text h5::after {
+    width: 15vw;
+  }
+  #header .header-text h2 {
+    font-size: 3.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    padding: 0.1rem auto;
+  }
+  #header .content-wrapper {
+    padding-top: 1.5rem;
+  }
+  #header .header-text h5 {
+    font-size: 2.8rem;
+  }
+  #header .header-text h5::after {
+    width: 20vw;
+  }
+  #header .header-text h2 {
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+  }
+  #about {
+    padding: 8rem 0;
+  }
+  #skills {
+    padding: 5rem 0;
+    background: #FBFBFF;
+  }
+  #skills h2 {
+    font-size: 4.8rem;
+  }
+  #skills .skill .col-12 {
+    margin: 1.2rem 0;
+  }
+  #skills .skill .col-12 h3 {
+    font-size: 2rem;
+  }
+  #skills .education .edu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #skills .education .edu-container .col-12 {
+    padding: 1.5rem;
+  }
+  #skills .education .edu-container .col-12 h3 {
+    font-weight: 700;
+    font-size: 2.2rem;
+  }
+  #skills .education .edu-container .col-12 h3 span i {
+    font-size: 3rem;
+  }
+  #skills .education .edu-container .col-12 h5 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #header {
+    padding: 0.1rem auto;
+  }
+  #header .content-wrapper {
+    padding-top: 1.5rem;
+  }
+  #header .header-text {
+    text-align: center;
+  }
+  #header .header-text h5 {
+    font-size: 2.8rem;
+    text-align: left;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  #header .header-text h5::after {
+    width: 20vw;
+  }
+  #header .header-text h2 {
+    font-size: 3.5rem;
+  }
+  #services {
+    padding: 3rem 0;
+  }
+  #services .col-12 h6 {
+    font-size: 1.7rem;
+  }
+  #services .col-12 h2 {
+    font-size: 3.8rem;
+    font-weight: bolder;
+  }
+  #clients {
+    padding: 2rem 0;
+  }
+  #clients h5 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: relative;
+  }
+  #clients h2 {
+    font-size: 3.4rem;
+    font-weight: bolder;
+  }
+  #portfolio {
+    padding: 10rem 0;
+  }
+  #portfolio h2 {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #skills {
+    padding: 5rem 0;
+    background: #FBFBFF;
+  }
+  #skills h2 {
+    font-size: 2.8rem;
+  }
+  #portfolio {
+    padding: 10rem 0;
+  }
+  #portfolio h2 {
+    font-size: 2.8rem;
+  }
+  #clients {
+    padding: 2rem 0;
+  }
+  #clients h2 {
+    font-size: 2.8rem;
+    font-weight: bolder;
+  }
+  #contact {
+    padding: 7rem 0 0 0;
+  }
+  #contact h2 {
+    font-weight: bolder;
+    font-size: 2.8rem;
+  }
+  #services {
+    padding: 5rem 0;
+    margin: 4rem auto;
+  }
+  #services .col-12 h2 {
+    font-size: 2.8rem;
+  }
+  #services .row .service a {
+    font-size: 0.2rem;
+    padding: 0;
+  }
+  #about {
+    padding: 5rem 0;
+  }
+  #about h2 span {
+    font-size: 1.9rem;
+  }
+  #about h5 {
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    font-weight: bolder;
+  }
+  #about p {
+    font-size: 1.2rem;
+    color: grey;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+  }
+  #about p span i {
+    font-size: 2.2rem;
+    color: #7d5fff;
+  }
+}
+/*# sourceMappingURL=style.css.map */

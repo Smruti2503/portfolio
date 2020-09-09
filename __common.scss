@@ -1,0 +1,21 @@
+
+
+@mixin pri-btn{
+    background: #7d5fff;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid #7d5fff;
+    color: white;
+    transition: all 0.5s;
+}
+
+
+@mixin sec-btn{
+    border: 0.2rem solid #7d5fff;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    border-radius: 0.4rem;
+    background: transparent;
+    transition: all 0.5s;
+}
